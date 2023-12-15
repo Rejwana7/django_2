@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>context</title>
+</head>
+<body>
+    <body style="background-color: cadetblue;">
+        <h1 style="text-align:center; margin-top: 25px; ">Welcome to Context page</h1>
+        <div style="display:flex; justify-content: center; ">
+            <h3 style="text-align:center; margin-top: 25px; margin-right:15px; "><a href="/">Home</a></h3>
+            <h3 style="text-align:center; margin-top: 25px;margin-right:15px; "><a href="/navigation/navigate/">Navigation</a></h3>
+            <h3 style="text-align:center; margin-top: 25px;margin-right:15px; "><a href="/navigation/context/">Context</a></h3>
+
+          <!-- context -->
+      </div> 
+      
+
+       <div  style="text-align: center; display:flex; justify-content: center; ">
+        <ol>
+            <li style=" margin-bottom: 10px;"><h3 style="display:inline;">Join: </h3>{{list |  join:" "}}</li>
+             <li> <h3>Date: {{Birthday | date:"D d M Y"}}</h3></li>
+             <li> <h3 style="display:inline;">Default: </h3>{{Status | default:"Talented"}}</li>
+             <li> <h3 style="display:inline;">Length: </h3>{{Status | length}}</li>
+             <li><h3 style="display:inline;">Length: </h3>{{list | length}}</li>
+             <li><h3 style="display:inline;">Dictsort:</h3>{{person | dictsort:"name" }}</li>
+            
+             <li><h3 style="display:inline;">Lower: </h3>{{Text_1 | lower}}</li>
+             <li><h3 style="display:inline;">Slice: </h3>{{list |slice:":3"}}</li>
+             <li><h3 style="display:inline;">Truncatechars: </h3>{{ Text_1 | truncatechars:3 }}</li>
+             <li><h3 style="display:inline;">Truncatewords: </h3>{{ Text_1 | truncatewords:3 }}</li>
+             <li><h3 style="display:inline;">StripTags: </h3>{{ Text | striptags }}</li>
+             <li><h3 style="display:inline;">Add: </h3>{{ value | add:"10" }}</li>
+             <li><h3 style="display:inline;">Cut: </h3>{{ Text_2 | cut:"-" }}</li>
+ 
+ 
+         </ol>  
+ 
+       </div>
+
+      </div>
+       
+
+</body>
+</html>
