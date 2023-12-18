@@ -1,0 +1,110 @@
+{% extends 'base.html'%}
+
+
+{% load static %}
+{%block title%} About us {%endblock%}
+{%block css_link%}
+<link rel="stylesheet" href="{% static 'about.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+{%endblock css_link%}
+
+{%block content %}
+
+
+<div class="header">
+
+    <h2 class="text-center pt-3 text-white">Welcome to <strong class="text-danger">The Serial Griller</strong>
+        Restaurant</h2>
+
+    <!-- paragraph image  -->
+    <div class=" ">
+        <div class="row text-center mt-3 ">
+
+
+
+            <div class="col-lg-5 col-md-12 mt-4">
+                <img src="{%static 'burger.jpg'%}" alt="burger" class="w-75 img-fluid rounded  burger" />
+
+            </div>
+
+            <div class="col-lg-7 col-md-12">
+
+                <div class="title text-lg-center d-inline justify-content-center ">
+                    <h4 class="para fs-4 fw-bold fst-italic text-white  text-lg-center ">About Us</h4>
+                    <p class="para fs-5 fw-medium text-white"><span class="firstcharacter fs-1 fst-italic">F</span>ar
+                        far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+                        large language ocean. Far far away, behind the word mountains, far from the countries Vokalia
+                        and Consonantia, there live the blind texts. A small river named Duden flows by their place and
+                        supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts
+                        of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind
+                        texts it is an almost unorthographic life.</p>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer class="footer bg-black">
+
+                <div class="row">
+
+                    <div class="col-md-12 col-lg-4">
+                        <div class="icon mt-5 text-white">
+                            <h5>Follow us</h5>
+                            <div class="gap-5">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </div>   
+                            <div class="icon mt-3 text-white">
+                                <h5>Address</h5>
+                                <div class="gap-5">
+                                    <p>Hosne Ara Villa,level4,CDA Ave Chattogram 4209</p>
+                                </div>
+                             </div>   
+                                <div class="icon mt-3 text-white">
+                                    <h5>Contact Us</h5>
+                                    <div class="gap-5">
+                                        <p>serialgrillar@gmail.com</p>
+                                        <p>01712064957</p>
+                                    </div>
+                                </div>
+                           
+
+
+
+
+
+                    </div>
+                    <!-- new col -->
+                    <div class="col-md-12  col-lg-4 text-align-center mt-5 text-white">
+                        <h4 class="fst-italic">Opening Hours</h4>
+                        <ul class="text-align-center ps-3 ">
+                            <li class="list-group-item mt-2">Sunday  <time>12:00 </time> to <time>10:45</time></li>
+                            <li class="list-group-item mt-2">Monday<time>12:00 </time> to <time>10:45</time></li>
+                            <li class="list-group-item mt-2">Tuesday <time>12:00 </time> to <time>10:45</time></li>
+                            <li class="list-group-item mt-2">Wednesday <time>12:00 </time> to <time>10:45</time></li>
+                            <li class="list-group-item mt-2">Thrusday <time>12:00 </time> to <time>10:45</time></li>
+                            <li class="list-group-item mt-2">Friday <time>12:00 </time> to <time>10:45</time></li>
+                            <li class="list-group-item mt-2">Saturday <time>12:00 </time> to <time>10:45</time></li>
+                          </ul>
+                    </div>
+
+                    <div class="col-md-12 col-lg-4 text-white mt-5">
+                       <h4 class="fst-italic">Online Payment</h4>
+                        <ul class="">
+                            <li class="list-group-item mt-2">Bkash</li>
+                            <li class="list-group-item mt-2">Nagad</li>
+                            <li class="list-group-item mt-2">Rocket</li>
+                            <li class="list-group-item mt-2">Bank</li>
+                            <li class="list-group-item mt-2">Card</li>
+                          </ul>
+                    </div>
+
+
+                </div>
+            </footer>
+            <!-- footer end -->
+            {% endblock %}

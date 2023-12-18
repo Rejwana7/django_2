@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block title%} Serial Griller {%endblock%}
+{%block css_link%} 
+<link rel="stylesheet" href="{% static 'home.css'%}"
+{%endblock css_link%}
+
+{%block content %}
+
+
+<div class="header">
+  
+    <h2 class="text-center pt-3">Welcome to <strong class="text-danger">The Serial Griller</strong> Restaurant</h2>
+
+<!-- paragraph image  -->
+<div class="container ">
+    <div class="row text-center mt-3 ">
+       <div class="col-lg-5 col-md-12">
+
+         <div class="title text-lg-center">
+            <h4 class="para1 fs-4 fw-bold text-primary  text-lg-center">Enjoy Our Delicious Food</h4>
+            <p class="para fs-5 fst-italic text-center">Discover a chicken lover's dreamland at Serial Griller, where we've gathered an egg-cellent collection of chicken dishes for your enjoyment! 🍽</p>
+         </div>
+       </div>
+
+
+       <div class="col-lg-7 col-md-12 mt-lg-4 image">
+        <img src="{%static 'burger_1.jpg'%}" alt="burger" class="w-75 img-fluid rounded float-end burger1"/>
+
+       </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</div>
+</div>
+
+<!-- paragraph image end -->
+
+{% endblock%}

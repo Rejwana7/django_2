@@ -1,0 +1,26 @@
+{% extends "base.html "%}
+
+
+{% block content%}
+<h1 style="text-align: center; margin-top: 5px;"class="text-danger fw-bold">Show Item</h1>
+<div class="container">
+
+    <div class="row gy-3 my-3">
+        {% for i in categories %}
+        <div class="col-sm-6 col-md-4">
+
+            <div class="card">
+                <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="meal image">
+                <div class="card-body">
+                    <h5 class="card-id">Id: {{i.idCategory}}</h5>
+                    <h5 class="card-title">{{i.strCategory}}</h5>
+                    <p class="card-text">{{i.strCategoryDescription | truncatewords:10}}</p>
+                    
+                </div>
+            </div>
+        </div>
+        {%endfor %}  
+    </div>
+</div>
+
+{% endblock %}

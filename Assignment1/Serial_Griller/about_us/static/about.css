@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+}
+
+/* body{
+    background-image: url('black1.jpg'), linear-gradient(rgba(0,0,0.1),rgba(0,0,0.1));
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+   
+   
+} */
+
+/* .navbar{
+    background-color: bisque;
+} */
+.header{
+    background-color: darkgray;
+    /* height:600px; */
+}
+
+.burger{
+    height:505px;
+   
+}
+
+
+.para{
+    margin-top: 25px;
+    margin-right: 5px;
+}
+
+
+/* .footer{
+   
+    height:500px;
+ 
+} */

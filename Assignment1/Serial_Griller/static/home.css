@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+   
+}
+.header{
+    background-color: burlywood;
+    display:block;
+    background-attachment: fixed;
+    background-position: center-top;
+    
+}
+.title{
+    margin-top: 150px;
+}
+
+
+ 
+   
+
