@@ -1,0 +1,44 @@
+{%extends "base.html" %}
+
+{% block title %}Model  Form {% endblock title %}
+
+
+{% block content %}
+
+<!-- {{data}} -->
+{% if data %}
+
+ <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Roll</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Student class</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for st in data%}
+    
+      <tr>
+        <td>{{st.roll}}</td>
+        <td>{{st.name}}</td>
+        <td>{{st.address}}</td>
+        <td>{{st.s_class}}</td>
+        <td ><a  class="btn btn-danger" href="{%url 'deletestudent' st.roll %}">Delete</a></td>
+      </tr>
+      {%endfor%}
+        
+    </tbody>
+  </table> 
+
+     
+ 
+
+
+{% else %}
+<h3>No data available to show</h3>
+
+{% endif %}
+
+{% endblock content %}
