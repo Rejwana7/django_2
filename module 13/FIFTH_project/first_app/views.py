@@ -30,6 +30,7 @@ def submit_form(request):
 def DjangoForm(request):
   if request.method =='POST':
     form = contactForm(request.POST,request.FILES)
+    #form object
     if form.is_valid():
     #  file=form.cleaned_data['file']
     #  with open('./first_app/upload/' + file.name, 'wb+') as destination:
