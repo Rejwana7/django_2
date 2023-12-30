@@ -32,6 +32,6 @@ def Edit_Album(request,id):
 
 
 def Delete_Album(request,id):
-    album=Album.objects.get(pk=id)
+    album=models.Album.objects.get(pk=id)
     album.delete()
     return redirect('homepage')
