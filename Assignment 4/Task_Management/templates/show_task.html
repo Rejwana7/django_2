@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block title %}Show Task{% endblock title%}
+
+{%block content%}
+
+<h4 class="text-center fst-italic fs-2 text-info-emphasis fw-bold mt-2">Show All Task</h4>
+<div class="container">
+
+    <div class="row gy-3 my-3">
+
+        {% for item in data%}
+
+        <div class="col-md-3">
+            <div class="card" >
+                
+                <div class="card-body">
+                    <h5 class="card-title">ID: {{item.id}}</h5>
+                    <h5 class="card-title">{{item.tasktitle}}</h5>
+                    <p class="card-text">{{item.taskdescription}}</p>
+                    <h5 class="card-title">{{item.task_assign_date}}</h5>
+                    <h5>Categories: {% for cat in item.categories.all%}
+                           <a href="{% url 'edit_category' item.id %}" class="btn btn-primary btn-sm">{{cat.category_name}}</a>
+                            {%endfor%}
+                    </h5>
+                    {% if item.is_completed == False %}
+                    <a  href="{% url 'edit_task' item.id %}"class="btn btn-secondary ">Edit</a>
+                    <a  href="{% url 'delete_task' item.id %}"class="btn btn-info ">Delete</a>
+                
+                    {% else %}
+                    <a  class="btn btn-success">Completed</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+     {%endfor%}   
+
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock%}
