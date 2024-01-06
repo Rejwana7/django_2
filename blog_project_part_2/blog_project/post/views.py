@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from . import forms
 from . import models
 from django.contrib.auth.decorators import login_required
+from django.views.generic import CreateView
 
 # Create your views here.
 @login_required
@@ -21,6 +22,11 @@ def add_post(request):
 
 
     return render(request,"add_post.html" ,{'form': post_form})
+
+
+
+    # add post using class based view
+
 
 
 @login_required

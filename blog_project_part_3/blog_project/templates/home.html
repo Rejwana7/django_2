@@ -1,0 +1,82 @@
+{%extends "base.html" %}
+
+{% load static %}
+{%block content %}
+
+<div class="d-flex flex-wrap row align-items-center">
+  <div class="col-lg-6 col-md-12 ">
+
+    <h2 class="">Welcome to Django Blog</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, modi placeat. Magni commodi repellendus, ea
+      assumenda rerum tempore voluptatibus nihil exercitationem amet minus. Nostrum ut natus aliquam vitae cum minima,
+      doloribus deleniti similique totam cumque voluptate recusandae repellat nobis consequatur quos possimus maiores.
+      Sapiente maxime aperiam veritatis, omnis ipsum nulla! Quia accusantium maiores est, vero officia, tempora aut
+      tempore mollitia, labore ipsa consequuntur. Harum tempore, id consequatur porro accusamus cupiditate culpa
+      reiciendis omnis molestias cum illo alias dicta dolor architecto.</p>
+  </div>
+
+
+
+  <div class="col-lg-6 col-md-12 px-3 pt-3">
+    <img src="{% static 'blog.jpg'%}" class="w-100">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="d-flex flex-wrap p-5">
+  <div class="col-lg-2 col-md-4 bg-white px-3 pt-3" style="height:650px">
+    <h5> All Categories</h5>
+    {% for cat in category %}
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="category" id="{{cat.id}}">
+      <label class="form-check-label" for="{{cat.id}}">
+
+        <a href=" {% url 'category_wise_post' cat.slug %}" class="text-decoration-none text-dark">{{cat.name}}</a>
+      </label>
+    </div>
+
+    {%endfor%}
+
+  </div>
+
+  <div class="col-lg-10 col-md-8 p-3">
+    <h4>{{data | length}} results found</h4>
+
+    <div class="d-flex flex-wrap  gy-3 my-3 ">
+
+      {% for post in data %}
+      <!-- <h4>{{post}}</h4> -->
+      <!-- <h4>{{data}}</h4> -->
+
+      <div class="col-sm-6  mb-sm-0 col-md-3 ">
+
+        <div class="card  m-2">
+          <img src="{{post.image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'details_post' post.id%}" class="text-decoration-none">{{post.title}} </a></h5>
+            <p class="card-text">{{post.content | truncatewords:20}}</p>
+            <p>Author: {{post.author.first_name}} {{post.author.last_name}}</p>
+            <p>Catagory:
+              {% for cat in post.category.all %}
+              <button class="btn btn-primary btn-sm m-2" disabled>{{cat.name}}</button>
+              {%endfor%}
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      {% endfor%}
+
+    </div>
+
+  </div>
+  {%endblock%}
