@@ -98,7 +98,8 @@ class DetailPostView(DetailView):
     pk_url_kwarg = 'id'    
     template_name = 'post_details.html'
     def post(self, request, *args,**kwargs):
-        post = self.get_object()
+        post = self.get_object() #sob object database theke niye astesi
+        # Retrieves the specific Post object associated with this view. 
         if self.request.method =='POST':
                 comment_form = forms.CommentForm(data=self.request.POST)
                 if comment_form.is_valid():
